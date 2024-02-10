@@ -1,0 +1,6 @@
+body {
+  font-family: "Alegreya", serif;
+  --webkit-font-smoothing: "Alegreya", serif, serif;
+  -moz-osx-font-smoothing: "Alegreya", serif, serif;
+  font-style: normal;
+}
