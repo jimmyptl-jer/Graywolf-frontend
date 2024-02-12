@@ -1,25 +1,42 @@
-import { useState } from 'react';
-import { useQuery } from 'react-query';
-import * as apiClient from '../http';
+import { useState, useEffect } from 'react';
 import ProjectComp from '../Components/ProjectComp';
+import * as apiClient from '../http';
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const { data: fetchProjects } = useQuery('fetchProjects', apiClient.fetchProjects, {
-    onSuccess: (data) => {
-      setProjects(data);
-    },
-  });
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const data = await apiClient.fetchProjects();
+        setProjects(data);
+        setIsLoading(false);
+      } catch (error) {
+        setError(error);
+        setIsLoading(false);
+      }
+    };
 
-  console.log(projects);
+    fetchProjects();
+
+    // Clean up function to prevent memory leaks
+    return () => {
+      setProjects([]);
+      setIsLoading(true);
+      setError(null);
+    };
+  }, []);
 
   return (
     <div className="p-3 max-w-3xl mx-auto min-h-screen">
       <h1 className="text-center text-3xl my-7 font-semibold">Projects</h1>
 
-      {projects ? (
+      {isLoading ? (
         <p>Loading projects...</p>
+      ) : error ? (
+        <p>Error: {error.message}</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map((project) => (
