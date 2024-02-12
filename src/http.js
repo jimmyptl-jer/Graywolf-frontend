@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || ''
+const API_BASE_URL = "https://graywolg-api.onrender.com" || ''
 
 
 export const contact = async (data) => {
@@ -17,6 +17,39 @@ export const contact = async (data) => {
   }
 }
 
+export const register = async (data) => {
+  const response = await fetch(`${API_BASE_URL}/api/auth/register`, {
+    method: 'POST',
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+
+  const responseBody = await response.json()
+
+  if (!response.ok) {
+    throw new Error(responseBody.message)
+  }
+}
+
+export const login = async (data) => {
+  const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
+    method: 'POST',
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+
+  const responseBody = await response.json()
+
+  if (!response.ok) {
+    throw new Error(responseBody.message)
+  }
+}
 
 export const fetchProjects = async () => {
   const response = await fetch(`${API_BASE_URL}/api/project/getProjects`);

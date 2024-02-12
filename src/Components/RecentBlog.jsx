@@ -4,7 +4,7 @@ import BlogPostImage3 from '../assets/jimmy.jpg';
 
 const LatestBlogPosts = () => {
   return (
-    <div className="container mx-auto items-center justify-between shadow-md mt-8 ">
+    <div className="container md:m-10  justify-between shadow-md">
       <h2 className="text-4xl  mb-6">LATEST BLOG POSTS</h2>
       <p className="text-lg mb-6">
         Explore my thoughts and insights on various topics related to the tech industry.

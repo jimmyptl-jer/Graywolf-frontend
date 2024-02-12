@@ -30,9 +30,9 @@ const Tiles = () => {
   ];
 
   return (
-    <div className="container mx-auto">
+    <div className="container items-center">
       <h1 className="text-2xl md:text-4xl lg:text-6xl text-center mb-10">Working Space</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 m-10">
         {tilesData.map((tile, index) => (
           <div key={index} className="p-4 w-full">
             <div className="flex flex-col border-l-4 border border-slate-700 transition duration-300 hover:border-orange-300 border-solid p-6 md:p-10 shadow-md">
