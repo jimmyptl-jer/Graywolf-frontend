@@ -30,7 +30,7 @@ const LatestBlogPosts = () => {
   return (
     <div className='md:m-8'>
       <div className="container mx-auto justify-between shadow-md">
-        <h2 className="text-4xl  mb-6">LATEST BLOG POSTS</h2>
+        <h2 className="text-2xl md:text-4xl lg:text-6xl mb-10 text-orange-300">LATEST BLOG POSTS</h2>
         <p className="text-lg mb-6">
           Explore my thoughts and insights on various topics related to the tech industry.
         </p>

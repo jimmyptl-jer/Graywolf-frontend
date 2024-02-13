@@ -1,6 +1,5 @@
 import Hero from "../Components/Hero"
 
-import Experience from "../Components/Experience"
 import CheckOutMyWork from "../Components/CheckWork"
 import AboutMe from "../Components/AboutMe"
 import RecentProjects from "../Components/RecentProjects"

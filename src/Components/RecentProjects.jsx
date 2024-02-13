@@ -5,7 +5,7 @@ const RecentProjects = () => {
   return (
     <div className="md:m-8 lg:m-8"> {/* Added margin */}
       <div className="container mx-auto shadow-lg rounded-lg overflow-hidden">
-        <h2 className='text-orange-300 text-3xl md:text-4xl lg:text-5xl py-4'>Recent Projects</h2>
+        <h2 className="text-2xl md:text-4xl lg:text-6xl  mb-10 text-orange-300">Recent Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-6 md:p-8 transform transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg border-l-4 border border-slate-700">
             <FaProjectDiagram className="text-white text-5xl mb-4" />
