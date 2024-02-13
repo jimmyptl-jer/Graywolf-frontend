@@ -7,25 +7,25 @@ const Tiles = () => {
       title: "Consulting",
       message:
         "Our consulting services help businesses improve their strategies and operations.",
-      link: "/consulting",
+      link: "/contact",
     },
     {
       title: "Web Application",
       message:
         "We specialize in developing scalable and user-friendly web applications.",
-      link: "/web-application",
+      link: "/contact",
     },
     {
       title: "Development",
       message:
         "Our development team crafts high-quality software solutions tailored to your needs.",
-      link: "/development",
+      link: "/contact",
     },
     {
       title: "DevOps",
       message:
         "We provide DevOps solutions to streamline development and deployment processes.",
-      link: "/devops",
+      link: "/contact",
     },
   ];
 

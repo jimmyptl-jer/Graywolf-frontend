@@ -3,7 +3,7 @@ import { FaGithub, FaCode } from 'react-icons/fa';
 
 const ProjectComp = ({ project }) => {
   return (
-    <div className="shadow-md p-6 rounded-md mb-8">
+    <div className="flex flex-col border-l-4 border border-slate-700 transition duration-300 hover:border-orange-300 border-solid p-6 md:p-10 shadow-md">
       <div className="mb-4">
         <h2 className="text-2xl font-bold text-amber-500">{project.title}</h2>
       </div>

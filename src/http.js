@@ -1,3 +1,5 @@
+// const API_BASE_URL = "https://graywolg-api.onrender.com" || ''
+
 const API_BASE_URL = "https://graywolg-api.onrender.com" || ''
 
 
@@ -62,3 +64,19 @@ export const fetchProjects = async () => {
 
   return response.json();
 };
+
+export const addPost = async (data) => {
+  const response = await fetch(`${API_BASE_URL}/api/post/create`, {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+
+  if (!response) {
+    throw new Error('Failed to add post')
+  }
+
+  return response.json()
+}

@@ -1,12 +1,12 @@
 import { Footer } from 'flowbite-react';
 import { Link } from 'react-router-dom';
-import { BsGithub, BsMedium, BsLinkedin } from 'react-icons/bs';
+import { IoCodeSlash } from "react-icons/io5";
 
 import GrayWolf from '../assets/graywolf.svg';
 
 export default function FooterCom() {
   return (
-    <Footer container className='bg-black text-white'>
+    <Footer container className='bg-transparent text-white'>
       <div className='w-full container mx-auto'>
         <div className='grid w-full justify-between sm:flex md:grid-cols-1'>
           <div>
@@ -86,9 +86,14 @@ export default function FooterCom() {
             className=' text-white'
           />
           <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
-            <Footer.Icon href='https://www.linkedin.com/in/jimmy-patel-b09311160/' icon={BsLinkedin} />
-            <Footer.Icon href='https://www.github.com/jimmyptl-jer' icon={BsGithub} />
-            <Footer.Icon href="https://medium.com/@jimmyptl46" icon={BsMedium} />
+            <Footer.LinkGroup col>
+              <Footer.Link
+                href="/login"
+                className=' text-white cursor-pointer'
+              >
+                <IoCodeSlash />
+              </Footer.Link>
+            </Footer.LinkGroup>
           </div>
         </div>
       </div>

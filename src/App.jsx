@@ -7,13 +7,12 @@ import Contact from './Pages/Contact';
 import Project from './Pages/Project';
 import Register from './Pages/Register';
 import PrivateRoute from './Components/PrivateRoute';
-import { useAppContext } from './Context/AppContext';
+import AddPost from './Pages/AddPOst';
+
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
 
 const App = () => {
-
-  const { isLoggedIn } = useAppContext()
 
   return (
     <BrowserRouter>
@@ -27,7 +26,8 @@ const App = () => {
         <Route path='/login' element={<Login />} />
         {/* Use PrivateRoute for the Dashboard */}
         <Route element={<PrivateRoute />}>
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='dashboard' element={<Dashboard />} />
+          <Route path='/add-post' element={<AddPost />} />
         </Route>
       </Routes>
       <Footer />

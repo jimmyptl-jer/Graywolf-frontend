@@ -2,12 +2,15 @@ import { Navbar } from 'flowbite-react';
 import { Link, useLocation } from 'react-router-dom';
 
 import GrayWolf from '../assets/graywolf.svg';
+import { useAppContext } from '../Context/AppContext';
 
 const Header = () => {
   const path = useLocation().pathname;
 
+  const { isLoggedIn } = useAppContext()
+
   return (
-    <Navbar className="text-white bg-black mt-10">
+    <Navbar className="text-white bg-transparent mt-10">
       <Link to="/" className="self-center whitespace-nowrap text-lg sm:text-xl font-semibold">
         <img src={GrayWolf} alt="Logo" className="w-20 h-20 object-contain justify-center" />
       </Link>
@@ -28,6 +31,10 @@ const Header = () => {
         <Navbar.Link active={path === '/projects'} as={'div'}>
           <Link to="/project" className="text-white ">Projects</Link>
         </Navbar.Link>
+
+        {isLoggedIn && <Navbar.Link active={path === '/dashboard'} as={'div'}>
+          <Link to="/dashboard" className="text-white ">Dashboard</Link>
+        </Navbar.Link>}
       </Navbar.Collapse>
     </Navbar>
   );

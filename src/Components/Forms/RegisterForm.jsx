@@ -25,12 +25,12 @@ const RegisterForm = () => {
   })
 
   return (
-    <form className='flex flex-col gap-5' onSubmit={onSubmit}>
+    <form className='flex flex-col gap-5 ' onSubmit={onSubmit}>
       <h2 className='text-3xl font-bold'>Create an Account</h2>
       <div className='flex flex-col md:flex-row gap-5'>
         <label className='text-sm flex-1'>First Name
           <input
-            className='border rounded py-1 px-2 font-normal'
+            className='border rounded py-1 px-2 font-normal text-black'
             type='text'
             {...register("firstName", { required: "This field is required" })} />
           {errors.firstName && (
@@ -42,7 +42,7 @@ const RegisterForm = () => {
           Last Name
           <input
             type='text'
-            className='border rounded py-1 px-2 font-normal'
+            className='border rounded py-1 px-2 font-normal text-black'
             {...register("lastName", { required: "This field is required" })} />
           {errors.lastName && (
             <span className="text-red-500">{errors.lastName.message}</span>
@@ -54,7 +54,7 @@ const RegisterForm = () => {
         Username
         <input
           type='text'
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="border rounded w-full py-1 px-2 font-normal text-black"
           {...register("username", { required: "This field is required" })} />
         {errors.username && (
           <span className="text-red-500">{errors.username.message}</span>
@@ -65,7 +65,7 @@ const RegisterForm = () => {
         Email
         <input
           type='email'
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="border rounded w-full py-1 px-2 font-normal text-black"
           {...register("email", { required: "This field is required" })} />
         {errors.email && (
           <span className="text-red-500">{errors.email.message}</span>
@@ -76,7 +76,7 @@ const RegisterForm = () => {
         Password
         <input
           type="password"
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="border rounded w-full py-1 px-2 font-normal text-black"
           {...register("password", {
             required: "This filed id required",
             minLength: {
@@ -90,11 +90,11 @@ const RegisterForm = () => {
         )}
       </label>
 
-      <label className="text-sm  flex-1">
+      <label className="text-sm flex-1">
         Confirm Password
         <input
           type="password"
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="border rounded w-full py-1 px-2 font-normal text-black"
           {...register("confirmPassword", {
             validate: (val) => {
               if (!val) {
