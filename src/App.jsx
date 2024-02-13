@@ -7,7 +7,7 @@ import Contact from './Pages/Contact';
 import Project from './Pages/Project';
 import Register from './Pages/Register';
 import PrivateRoute from './Components/PrivateRoute';
-import AddPost from './Pages/AddPOst';
+import AddPost from './Pages/AddPost';
 
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
