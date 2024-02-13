@@ -4,7 +4,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative text-center text-white h-screen flex flex-col items-center justify-center px-8 md:px-1">
+    <div className="relative text-center text-white h-screen flex flex-col items-center justify-center px-8 md:px-1 m-5 md:m-0 lg:m-0 transition-transform duration-300 ease-in-out transform hover:scale-105">
       {/* Content */}
       <div className="relative z-10">
         <h1 className="text-7xl md:text-9xl leading-tight mb-4">
@@ -16,7 +16,7 @@ const Hero = () => {
           <button
             type="button"
             onClick={() => navigate('/contact')}
-            className="btn-primary border text-white px-5 py-3 font-normal text-base cursor-pointer text-center transition duration-500  hover:bg-orange-300 hover:border-none  mr-4"
+            className="btn-primary border text-white px-5 py-3 font-normal text-base cursor-pointer text-center transition duration-500 hover:bg-orange-300 hover:border-none  mr-4"
           >
             Get In Touch
           </button>

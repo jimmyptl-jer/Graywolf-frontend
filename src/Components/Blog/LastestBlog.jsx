@@ -1,6 +1,6 @@
 import BlogPost from "./BlogPost";
 
-import BlogPostImage1 from '../../assets/jimmy.jpg';
+import BlogPostImage1 from '../../assets/BlogPos1.mp4';
 import BlogPostImage2 from '../../assets/jimmy.jpg';
 import BlogPostImage3 from '../../assets/jimmy.jpg';
 
@@ -9,7 +9,7 @@ const LatestBlogPosts = () => {
   const posts = [
     {
       title: "A Guide to Containerizing a MERN Stack Application",
-      image: BlogPostImage1,
+      video: BlogPostImage1,
       content: "Stay updated with the latest trends in the software world and discover what's shaping the industry.",
       link: "https://medium.com/@jimmyptl46/a-guide-to-containerizing-a-mern-stack-application-dd8c647d2b78"
     },
