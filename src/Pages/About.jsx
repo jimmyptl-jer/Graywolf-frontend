@@ -2,14 +2,14 @@ import Experience from "../Components/Experience";
 
 const About = () => {
   return (
-    <div className='container mx-auto p-8 md:p-16'>
+    <div className='container mx-auto p-8 md:p-16 text-justify'>
       <div className='text-zone animate-fadeIn'>
         <h1 className='text-3xl md:text-4xl font-bold mb-4'>
           About Me
         </h1>
 
         <p className='text-base md:text-lg mb-4'>
-          Meet Jimmy, an enthusiastic and motivated computer science enthusiast studying at the University of Windsor. My passion lies in the exciting fields of web development and DevOps, and I'm currently on the path to achieving a Master of Applied Computing degree. With each step, I'm driven by the excitement of expanding my knowledge in these ever-evolving realms.
+          Meet Jimmy, an enthusiastic and motivated computer science enthusiast studying at the University of Windsor. My passion lies in the exciting fields of Software development and DevOps, and I'm currently on the path to achieving a Master of Applied Computing degree. With each step, I'm driven by the excitement of expanding my knowledge in these ever-evolving realms.
         </p>
 
         <p className='text-base md:text-lg mb-4'>

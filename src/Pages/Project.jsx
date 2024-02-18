@@ -38,7 +38,7 @@ const Project = () => {
       ) : error ? (
         <p>Error: {error.message}</p>
       ) : (
-        <div className="grid grid-row gap-4">
+        <div className="grid grid-row gap-4 text-justify">
           {projects.map((project) => (
             <ProjectComp key={project._id} project={project} />
           ))}
