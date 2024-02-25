@@ -2,6 +2,8 @@ import BlogPostImage1 from '../assets/jimmy.jpg';
 import BlogPostImage2 from '../assets/jimmy.jpg';
 import BlogPostImage3 from '../assets/jimmy.jpg';
 
+import { Link } from 'react-router-dom'
+
 const LatestBlogPosts = () => {
   return (
     <div className='md:m-8'>
@@ -17,6 +19,7 @@ const LatestBlogPosts = () => {
             <p className="mb-4">
               Stay updated with the latest trends in software world and discover what's shaping the industry.
             </p>
+            <Link to='https://medium.com/@jimmyptl46/a-guide-to-containerizing-a-mern-stack-application-dd8c647d2b78'>Read More</Link>
             <a href="#blogPost1" className="text-orange-300 hover:underline block">
               Read More
             </a>

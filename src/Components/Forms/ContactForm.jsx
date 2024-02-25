@@ -9,7 +9,7 @@ const ContactForm = () => {
   const { showToast } = useAppContext()
   const navigate = useNavigate()
 
-  const { mutate, isLoading } = useMutation(apiClient.register, {
+  const { mutate, isLoading } = useMutation(apiClient.contact, {
     onSuccess: () => {
       showToast({ message: "Message Sent ", type: "SUCCESS" });
       navigate('/');
