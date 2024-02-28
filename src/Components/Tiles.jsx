@@ -39,8 +39,8 @@ const Tiles = () => {
   return (
     <div className="md:m-8 lg:m-8 flex justify-center">
       <div className="container">
-        <h1 className="text-2xl md:text-4xl lg:text-6xl text-center mb-10 text-orange-300">Recent Blog</h1>
-        <p>Read through some of my thoughts and insights through being a Software Developer.</p>
+        <h1 className="text-lg text-center mb-10 text-orange-300">Recent Blog</h1>
+        <p className="text-2xl md:text-4xl lg:text-6xl">Read through some of my thoughts and insights through being a Software Developer.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {tilesData.map((tile, index) => (
             <div key={index} className="p-4">
