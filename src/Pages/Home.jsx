@@ -11,7 +11,7 @@ const Home = () => {
     <div className="m-5 md:m-0 lg:m-0">
       <Hero />
       <AboutMe />
-      <Tiles />
+{/*       <Tiles /> */}
       <RecentProjects />
       <CheckOutMyWork />
       <LatestBlogPosts />
