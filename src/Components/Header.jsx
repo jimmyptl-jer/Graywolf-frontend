@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi'; // Importing the FiMenu and FiX icons
-import GrayWolf from '../assets/graywolf.svg';
+
 
 const Header = () => {
   const path = useLocation().pathname;

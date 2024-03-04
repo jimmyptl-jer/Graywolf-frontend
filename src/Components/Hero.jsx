@@ -7,7 +7,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative text-center text-white h-screen flex flex-col items-center justify-center px-8 md:px-1 m-5 md:m-0 lg:m-0 transition-transform duration-300 ease-in-out transform hover:scale-105 bg-white"
+    <div className="relative text-center text-white h-screen flex flex-col items-center justify-center px-8 md:px-1 m-5 md:m-0 lg:m-0 transition-transform duration-300 ease-in-out transform bg-white"
       style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Content */}
       <div className="relative z-10">
