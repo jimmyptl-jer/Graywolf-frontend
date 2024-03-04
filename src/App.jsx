@@ -26,7 +26,7 @@ const App = () => {
         <Route path='/login' element={<Login />} />
         {/* Use PrivateRoute for the Dashboard */}
         <Route element={<PrivateRoute />}>
-          <Route path='dashboard' element={<Dashboard />} />
+          <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/add-post' element={<AddPost />} />
         </Route>
       </Routes>

@@ -1,10 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 
+// Import your image file
+import backgroundImage from '../assets/Background.png';
+
 const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative text-center text-white h-screen flex flex-col items-center justify-center px-8 md:px-1 m-5 md:m-0 lg:m-0 transition-transform duration-300 ease-in-out transform hover:scale-105">
+    <div className="relative text-center text-white h-screen flex flex-col items-center justify-center px-8 md:px-1 m-5 md:m-0 lg:m-0 transition-transform duration-300 ease-in-out transform hover:scale-105 bg-white"
+      style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Content */}
       <div className="relative z-10">
         <h1 className="text-7xl md:text-9xl leading-tight mb-4">
