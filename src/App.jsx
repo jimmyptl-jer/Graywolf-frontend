@@ -7,10 +7,11 @@ import Contact from './Pages/Contact';
 import Project from './Pages/Project';
 import Register from './Pages/Register';
 import PrivateRoute from './Components/PrivateRoute';
-import AddPost from './Pages/AddPost';
+
 
 import Dashboard from './Pages/Dashboard';
 import Login from './Pages/Login';
+import AddProject from './Pages/AddProject';
 
 const App = () => {
 
@@ -27,7 +28,8 @@ const App = () => {
         {/* Use PrivateRoute for the Dashboard */}
         <Route element={<PrivateRoute />}>
           <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/add-post' element={<AddPost />} />
+          <Route path='/add-post' element={<AddProject />} />
+          <Route path='/add-project' element={<AddProject />} />
         </Route>
       </Routes>
       <Footer />

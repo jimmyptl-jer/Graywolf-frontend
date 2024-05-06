@@ -1,5 +1,4 @@
-import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
-import ContactForm from '../Components/Forms/ContactForm';
+import ContactForm from '../Forms/Contact/ContactForm';
 
 const ContactPage = () => {
   return (

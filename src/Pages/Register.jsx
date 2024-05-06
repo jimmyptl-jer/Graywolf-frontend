@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import RegisterForm from "../Components/Forms/RegisterForm";
-import GrayWolf from '../assets/graywolf.svg';
+import RegisterForm from "../Forms/Login/RegisterForm"
+import GrayWolf from '../assets/logo.png';
 
 const Register = () => {
 

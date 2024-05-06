@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import GrayWolf from '../assets/graywolf.svg';
-import LoginForm from '../Components/Forms/LoginForm';
+import GrayWolf from '../assets/logo.png';
+import LoginForm from '../Forms/Login/LoginForm';
 
 
 const Login = () => {
@@ -14,9 +14,9 @@ const Login = () => {
             alt="Logo"
             className="w-50 h-50 object-contain justify-center"
           />
-          <p className='text-slate-800 font-bold text-center mt-2'>
+          <p className='text-white font-bold text-center mt-2'>
             Welcome to My Community!
-            <span className='block text-slate-600 font-normal'>
+            <span className='block text-white font-normal'>
               Let create, inspire, and build a supportive community where ideas thrive. Welcome aboard!
             </span>
           </p>

@@ -11,7 +11,7 @@ const Dashboard = () => {
 
         <button
           type="button"
-          onClick={() => navigate('/add-post')}
+          onClick={() => navigate('/add-project')}
           className="btn-primary border text-white px-5 py-3 font-normal text-base cursor-pointer text-center transition duration-500  hover:bg-orange-300 hover:border-none  mr-4"
         >
           Add Post
@@ -22,7 +22,7 @@ const Dashboard = () => {
           onClick={() => navigate('/add-project')}
           className="btn-primary border text-white px-5 py-3 font-normal text-base cursor-pointer text-center transition duration-500  hover:bg-orange-300 hover:border-none  mr-4"
         >
-          AddProject
+          Add Project
         </button>
 
       </div>

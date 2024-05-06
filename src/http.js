@@ -1,6 +1,6 @@
 // const API_BASE_URL = "https://graywolg-api.onrender.com" || ''
 
-const API_BASE_URL = "https://graywolg-api.onrender.com" || ''
+const API_BASE_URL = 'http://localhost:3000'
 
 
 export const contact = async (data) => {
@@ -66,17 +66,27 @@ export const fetchProjects = async () => {
 };
 
 export const addPost = async (data) => {
-  const response = await fetch(`${API_BASE_URL}/api/post/create`, {
+  const response = await fetch(`${API_BASE_URL}/api/post`, {
     method: 'POST',
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
+    credentials: "include",
+    body: data
   })
 
-  if (!response) {
-    throw new Error('Failed to add post')
+  const responseBody = await response.json();
+
+  if (!response.ok) {
+    throw new Error(responseBody.message);
+  }
+}
+
+export const getAllPost = async () => {
+  const response = await fetch(`${API_BASE_URL}/api/post`, {
+    credentials: "include"
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch post");
   }
 
-  return response.json()
-}
+  return response.json();
+};

@@ -4,5 +4,6 @@ export const postTypes = [
   'NodeJs',
   'AWS',
   'Docker',
-  'CI/CD'
+  'CI/CD',
+  'MERN'
 ]

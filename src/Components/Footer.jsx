@@ -2,7 +2,7 @@ import { Footer } from 'flowbite-react';
 import { Link } from 'react-router-dom';
 import { IoCodeSlash } from "react-icons/io5";
 
-import GrayWolf from '../assets/graywolf.svg';
+import GrayWolf from '../assets/logo.png';
 
 export default function FooterCom() {
   return (
