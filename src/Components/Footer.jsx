@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import { IoCodeSlash } from "react-icons/io5";
 
 import GrayWolf from '../assets/logo.png';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export default function FooterCom() {
+
+  const { loginWithRedirect } = useAuth0()
+
   return (
     <Footer container className='bg-transparent text-white'>
       <div className='w-full container mx-auto'>
@@ -74,7 +78,6 @@ export default function FooterCom() {
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
-
           </div>
         </div>
         <Footer.Divider />
@@ -86,13 +89,15 @@ export default function FooterCom() {
             className=' text-white'
           />
           <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
+            {/* Use Link for internal navigation */}
             <Footer.LinkGroup col>
-              <Footer.Link
-                href="/login"
-                className=' text-white cursor-pointer'
+              <Link
+                to="/login"
+                className=' text-white cursor-pointer flex items-center'
+                onClick={async () => await loginWithRedirect()}
               >
                 <IoCodeSlash />
-              </Footer.Link>
+              </Link>
             </Footer.LinkGroup>
           </div>
         </div>

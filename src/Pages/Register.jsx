@@ -4,6 +4,7 @@ import GrayWolf from '../assets/logo.png';
 
 const Register = () => {
 
+
   return (
     <div className="min-h-screen mt-10">
       <div className="flex max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-10">
