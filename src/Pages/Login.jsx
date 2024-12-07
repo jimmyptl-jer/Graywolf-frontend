@@ -29,7 +29,7 @@ const Login = () => {
           <button className="w-full py-2 px-4 bg-blue-500 text-white rounded-lg" onClick={() => loginWithRedirect()}>Log in with Auth0</button>
           <div className='flex gap-2 text-sm font-bold mt-5'>
             <span>Want to create account?</span>
-            <Link to='/register' className='text-blue-500'>
+            <Link to='/sign-up' className='text-blue-500'>
               Sign Up
             </Link>
           </div>

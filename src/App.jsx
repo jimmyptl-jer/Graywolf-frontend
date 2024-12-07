@@ -22,7 +22,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/project" element={<Project />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/sign-up" element={<Register />} />
         <Route path="/login" element={<Login />} />
 
         {/* Private route for Dashboard and Add Project */}
