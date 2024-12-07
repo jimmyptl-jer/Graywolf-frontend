@@ -4,6 +4,7 @@ import { IoCodeSlash } from "react-icons/io5";
 
 import GrayWolf from '../assets/logo.png';
 import { useAuth0 } from '@auth0/auth0-react';
+import LoginButton from '../Pages/Login';
 
 export default function FooterCom() {
 
@@ -89,16 +90,7 @@ export default function FooterCom() {
             className=' text-white'
           />
           <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
-            {/* Use Link for internal navigation */}
-            <Footer.LinkGroup col>
-              <Link
-                to="/login"
-                className=' text-white cursor-pointer flex items-center'
-                onClick={async () => await loginWithRedirect()}
-              >
-                <IoCodeSlash />
-              </Link>
-            </Footer.LinkGroup>
+            <LoginButton />
           </div>
         </div>
       </div>
