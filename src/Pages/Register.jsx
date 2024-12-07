@@ -22,7 +22,7 @@ const Register = () => {
           <p className="text-center mt-2">
             Welcome to My Community!
             <span className="block font-normal">
-              Let's create, inspire, and build a supportive community where ideas thrive. Welcome aboard!
+              Let create, inspire, and build a supportive community where ideas thrive. Welcome aboard!
             </span>
           </p>
         </div>
