@@ -91,6 +91,7 @@ export default function FooterCom() {
           />
           <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
             <LoginButton />
+            <LoginButton />
           </div>
         </div>
       </div>
