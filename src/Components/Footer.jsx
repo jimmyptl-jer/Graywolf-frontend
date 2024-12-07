@@ -5,6 +5,7 @@ import { IoCodeSlash } from "react-icons/io5";
 import GrayWolf from '../assets/logo.png';
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from '../Pages/Login';
+import LogoutButton from '../Pages/Logout';
 
 export default function FooterCom() {
 
@@ -91,7 +92,7 @@ export default function FooterCom() {
           />
           <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
             <LoginButton />
-            <LoginButton />
+            <LogoutButton />
           </div>
         </div>
       </div>
