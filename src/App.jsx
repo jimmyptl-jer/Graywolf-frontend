@@ -31,7 +31,6 @@ const App = () => {
           <Route path="/add-project" element={<AddProject />} />
         </Route>
       </Routes>
-      <Footer />
     </>
   );
 };
