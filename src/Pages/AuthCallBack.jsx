@@ -3,7 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-const AuthCallbackPage = () => {
+const AuthCallback = () => {
   const navigate = useNavigate();
   const { user, isLoading, isAuthenticated } = useAuth0();
   const { createUser } = useCreateMyUser();
@@ -23,4 +23,4 @@ const AuthCallbackPage = () => {
   return <div>Loading...</div>; // Simple fallback UI while loading
 };
 
-export default AuthCallbackPage;
+export default AuthCallback;

@@ -7,7 +7,7 @@ import Project from './Pages/Project';
 import Register from './Pages/Register';
 import Login from './Pages/Login';
 import PrivateRoute from './Components/PrivateRoute';
-import AuthCallbackPage from './Pages/AuthCallback';
+import AuthCallback from './Pages/AuthCallback';
 import Dashboard from './Pages/Dashboard';
 import AddProject from './Pages/AddProject';
 
@@ -22,7 +22,7 @@ const App = () => {
         <Route path="/project" element={<Project />} />
         <Route path="/sign-up" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/auth-callback" element={<AuthCallbackPage />} />
+        <Route path="/auth-callback" element={<AuthCallback />} />
 
         {/* Private Routes */}
         <Route element={<PrivateRoute />}>
