@@ -19,39 +19,45 @@ export const contact = async (data) => {
   }
 }
 
-export const register = async (data) => {
-  const response = await fetch(`${API_BASE_URL}/api/auth/register`, {
-    method: 'POST',
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  })
+import { useAuth0 } from "@auth0/auth0-react";
+import { useMutation } from "react-query";
 
-  const responseBody = await response.json()
+export const useCreateMyUser = () => {
+  const { getAccessTokenSilently } = useAuth0();
 
-  if (!response.ok) {
-    throw new Error(responseBody.message)
-  }
-}
+  const createUserRequest = async (user) => {
+    const accessToken = await getAccessTokenSilently();
+    console.log("Access Token:", accessToken);
 
-export const login = async (data) => {
-  const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
-    method: 'POST',
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  })
+    const response = await fetch(`${API_BASE_URL}/api/my/user`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
 
-  const responseBody = await response.json()
+    if (!response.ok) {
+      throw new Error("Failed to create user");
+    }
+  };
 
-  if (!response.ok) {
-    throw new Error(responseBody.message)
-  }
-}
+  const {
+    mutateAsync: createUser,
+    isLoading,
+    isError,
+    isSuccess,
+  } = useMutation(createUserRequest);
+
+  return {
+    createUser,
+    isLoading,
+    isError,
+    isSuccess,
+  };
+};
+
 
 export const fetchProjects = async () => {
   const response = await fetch(`${API_BASE_URL}/api/project/getProjects`);

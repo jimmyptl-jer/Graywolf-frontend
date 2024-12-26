@@ -1,5 +1,3 @@
-import Experience from "../Components/Experience";
-
 const About = () => {
   return (
     <div className="container mx-auto p-8 md:p-16 text-justify  text-white">
@@ -40,46 +38,34 @@ const About = () => {
       <div className="mt-12 animate-slideInUp">
         <h1 className="text-3xl font-bold mb-6">Experience</h1>
 
-        {/* University of Windsor */}
-        <div className="mb-8">
-          <div className="flex items-center mb-2">
-            <h2 className="text-lg font-bold">Graduate Student</h2>
-          </div>
-          <p className="text-sm text-gray-200">
-            University of Windsor - Windsor, Ontario, Canada
-          </p>
-          <p className="text-sm text-gray-200">
-            Jan 2023 - June 2024
-          </p>
-        </div>
-
         {/* TOPS Technologies */}
         <div className="mb-8">
           <div className="flex items-center mb-2">
-            <h2 className="text-lg font-bold">React Developer (Internship)</h2>
+            <h2 className="text-lg font-bold">Developer</h2>
           </div>
           <p className="text-sm text-gray-200">
-            TOPS Technologies Pvt. Ltd - Ahmedabad
+            Vertex Agility - Ahmedabad
           </p>
           <p className="text-sm text-gray-200">
-            Nov 2021 - Nov 2022 · 1 yr 1 mo
+            Aug 2021 - Nov 2022 · 1 yr 1 mo
           </p>
           <p className="text-sm text-gray-200">
-            Technology Used: ReactJS, NodeJS, Linux, AWS, HTML, CSS, Agile
-            Methodologies
+            Tech Used: Python, React.js, Node.js, MongoDB, Linux, AWS, GitHub Actions, Terraform, Docker, Agile Methodologies
           </p>
           <ul className="list-disc ml-6">
-            <li>Led planning and development of three client projects.</li>
+            <li>Developed and automated end-to-end CI/CD pipelines, integrating GitHub Actions, Docker, and Terraform, which reduced deployment time and improved delivery efficiency. </li>
             <li>
-              Managed agile sprints and implemented feedback for enhanced
-              usability.
+              Coded and optimized application components using Python and MERN stack while designing CI/CD pipelines to streamline deployments and improve system reliability.
             </li>
             <li>
-              Collaborated with a cross-functional team to launch a web
-              application using React and Redux.
+              Integrated AWS Serverless and automated build pipelines to enhance cloud-based deployment processes, reducing downtime.
             </li>
-            <li>Designed and implemented RESTful API endpoints in NodeJS.</li>
-            <li>Conducted regular code reviews to ensure quality and security.</li>
+            <li>
+              Delivered greenfield projects using the MERN stack, focusing on performance, scalability, and seamless integration with cloud environments.
+            </li>
+            <li>
+              Developed and implemented RESTful API endpoints in Python and Node.js, enhancing client application functionality and ensuring robust data handling.
+            </li>
           </ul>
         </div>
 

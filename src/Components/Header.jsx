@@ -1,5 +1,5 @@
 // Importing necessary dependencies and hooks from React and React Router
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi'; // Importing the FiMenu and FiX icons
 import { useAppContext } from '../Context/AppContext';
