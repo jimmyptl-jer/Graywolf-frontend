@@ -7,7 +7,7 @@ import Project from './Pages/Project';
 import Register from './Pages/Register';
 import Login from './Pages/Login';
 import PrivateRoute from './Components/PrivateRoute';
-import AuthCallback from './Pages/AuthCallback';
+import AuthCallback from './Pages/AuthCallBack';
 import Dashboard from './Pages/Dashboard';
 import AddProject from './Pages/AddProject';
 
