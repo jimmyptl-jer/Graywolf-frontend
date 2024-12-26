@@ -1,86 +1,103 @@
-import { useForm } from 'react-hook-form'
-import { useMutation } from 'react-query'
-import * as apiClient from '../../http'
-import { useAppContext } from '../../Context/AppContext'
-import { useNavigate } from 'react-router-dom'
-import { Button } from 'flowbite-react'
+import { useForm } from "react-hook-form";
+import { useMutation } from "react-query";
+import * as apiClient from "../../http";
+import { useAppContext } from "../../Context/AppContext";
+import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
-  const { showToast } = useAppContext()
-  const navigate = useNavigate()
+  const { showToast } = useAppContext();
+  const navigate = useNavigate();
 
   const { mutate, isLoading } = useMutation(apiClient.contact, {
     onSuccess: () => {
-      showToast({ message: "Message Sent ", type: "SUCCESS" });
-      navigate('/');
+      showToast({ message: "Message Sent", type: "SUCCESS" });
+      navigate("/");
     },
-    onError: () => showToast({ message: "Sorry! Something went wrong", type: "ERROR" })
-
-  })
-  const { register, handleSubmit, formState: { errors } } = useForm()
+    onError: () =>
+      showToast({ message: "Sorry! Something went wrong", type: "ERROR" }),
+  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = handleSubmit(async (data) => {
-    mutate(data)
-  })
+    mutate(data);
+  });
 
   return (
-    <form className='flex flex-col gap-5 p-8 text-white shadow-lg' onSubmit={onSubmit}>
-      <h2 className='text-3xl font-bold mb-4 text-center'>Let's Connect</h2>
-
-      <p className="text-lg mb-6 text-center">
-        Feel free to reach out if you're interested in working together, being friends, or discussing the best coffee spots!
+    <form
+      className="space-y-6  text-white rounded-lg shadow-md"
+      onSubmit={onSubmit}
+    >
+      <h2 className="text-3xl font-bold text-orange-300">Contact Me</h2>
+      <p>
+        Reach out for collaboration, new projects, or just to say hello. I'd
+        love to hear from you!
       </p>
-      <p className='text-center'>You can also email me at <a href="mailto:jimmyptl46@gmail.com" className="font-semibold border-b">jimmyptl46@gmail.com</a>.</p>
 
-      <label className="text-sm flex-1">
-        Name
+      {/* Name Input */}
+      <div>
         <input
-          type='text'
-          className="border-b border-white w-full py-1 px-3 font-normal text-white bg-transparent focus:outline-none focus:border-purple-500"
-          {...register("name", { required: "This field is required" })} />
+          type="text"
+          placeholder="Your Name"
+          className="w-full p-3 border border-gray-700 bg-black text-white rounded focus:outline-none focus:border-orange-300"
+          {...register("name", { required: "This field is required" })}
+        />
         {errors.name && (
-          <span className="text-red-500">{errors.name.message}</span>
+          <span className="text-red-500 text-sm">{errors.name.message}</span>
         )}
-      </label>
+      </div>
 
-      <label className="text-sm flex-1">
-        Email
+      {/* Email Input */}
+      <div>
         <input
-          type='email'
-          className="border-b border-white w-full py-1 px-3 font-normal text-white bg-transparent focus:outline-none focus:border-purple-500"
-          {...register("email", { required: "This field is required" })} />
+          type="email"
+          placeholder="Your Email"
+          className="w-full p-3 border border-gray-700 bg-black text-white rounded focus:outline-none focus:border-orange-300"
+          {...register("email", { required: "This field is required" })}
+        />
         {errors.email && (
-          <span className="text-red-500">{errors.email.message}</span>
+          <span className="text-red-500 text-sm">{errors.email.message}</span>
         )}
-      </label>
+      </div>
 
-      <label className=" text-sm flex-1">
-        Subject
+      {/* Subject Input */}
+      <div>
         <input
-          type='text'
-          className="border-b border-white w-full py-1 px-3 font-normal text-white bg-transparent focus:outline-none focus:border-purple-500"
-          {...register("subject", { required: "This field is required" })} />
+          type="text"
+          placeholder="Subject"
+          className="w-full p-3 border border-gray-700 bg-black text-white rounded focus:outline-none focus:border-orange-300"
+          {...register("subject", { required: "This field is required" })}
+        />
         {errors.subject && (
-          <span className="text-red-500">{errors.subject.message}</span>
+          <span className="text-red-500 text-sm">{errors.subject.message}</span>
         )}
-      </label>
+      </div>
 
-      <label className="text-sm flex-1">
-        Message
+      {/* Message Input */}
+      <div>
         <textarea
-          className="border-b border-white w-full py-1 px-3 font-normal text-white bg-transparent focus:outline-none focus:border-purple-500"
-          rows="4"
-          {...register("message", { required: "This field is required" })}></textarea>
+          placeholder="Your Message"
+          rows="5"
+          className="w-full p-3 border border-gray-700 bg-black text-white rounded focus:outline-none focus:border-orange-300"
+          {...register("message", { required: "This field is required" })}
+        ></textarea>
         {errors.message && (
-          <span className="text-red-500">{errors.message.message}</span>
+          <span className="text-red-500 text-sm">{errors.message.message}</span>
         )}
-      </label>
+      </div>
 
-      <Button type='submit' gradientDuoTone='purpleToPink' className="self-start mt-4">
-        {isLoading ? "Sending..." : 'Send'}
-      </Button>
+      {/* Submit Button */}
+      <button
+        type="submit"
+        className="w-full bg-orange-300 text-black py-3 rounded font-semibold hover:bg-orange-500 transition duration-300"
+      >
+        {isLoading ? "Sending..." : "Submit"}
+      </button>
     </form>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

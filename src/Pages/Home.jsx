@@ -4,6 +4,7 @@ import CheckOutMyWork from "../Components/CheckWork"
 import AboutMe from "../Components/AboutMe"
 import PostBanner from "../Components/PostBanner"
 import PostGrid from "../Components/PostGrid"
+import ContactPage from "./Contact"
 // import LatestBlogPosts from "../Components/Blog/LastestBlog"
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <CheckOutMyWork />
       <PostBanner />
       <PostGrid />
+      <ContactPage />
       {/* <LatestBlogPosts /> */}
     </div>
 

@@ -2,40 +2,132 @@ import Experience from "../Components/Experience";
 
 const About = () => {
   return (
-    <div className='container mx-auto p-8 md:p-16 text-justify'>
-      <div className='text-zone animate-fadeIn'>
-        <h1 className='text-3xl md:text-4xl font-bold mb-4'>
+    <div className="container mx-auto p-8 md:p-16 text-justify  text-white">
+      <div className="text-zone animate-fadeIn space-y-6">
+        {/* Header Section */}
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-center text-gradient">
           About Me
         </h1>
 
-        <p className='text-base md:text-lg mb-4'>
-          Meet Jimmy, an enthusiastic and motivated computer science enthusiast studying at the University of Windsor. My passion lies in the exciting fields of Software development and DevOps, and I'm currently on the path to achieving a Master of Applied Computing degree. With each step, I'm driven by the excitement of expanding my knowledge in these ever-evolving realms.
+        {/* Paragraphs with subtle animations */}
+        <p className="text-lg md:text-xl mb-4 animate-slideIn">
+          <strong className="text-orange-400">Meet Jimmy</strong>, a <span className="highlight">Certified AWS Solutions Architect</span> with a strong focus on <span className="text-orange-400 font-semibold">Backend Development</span> and <span className="text-orange-400 font-semibold">Cloud Expertise</span>. My journey in the tech world is fueled by a passion for crafting efficient, scalable solutions and a dedication to continuous learning. Armed with certifications like <strong>AWS Solutions Architect - Associate</strong> and progressing toward <span className="text-orange-400 font-semibold">Terraform</span> and <span className="text-orange-400 font-semibold">Kubernetes</span>, I am well-equipped to navigate the ever-evolving tech landscape.
         </p>
 
-        <p className='text-base md:text-lg mb-4'>
-          Picture me as that curious individual who's always intrigued by the latest in tech. I'm on a perpetual quest to find fresh and innovative ways to harness emerging technologies. The goal? To enhance the art of web development while also smoothing out the often complex landscape of DevOps processes. And believe me, this journey has already led to some pretty cool projects and achievements, and I'm just getting warmed up!
+        <p className="text-lg md:text-xl mb-4 animate-fadeIn delay-100">
+          I thrive at the intersection of <strong>Software Development</strong> and <strong>DevOps</strong>, bringing a blend of creativity and precision to every project I undertake. My expertise spans technologies such as <span className="text-orange-400 font-semibold">AWS</span>, <span className="text-orange-400 font-semibold">Terraform</span>, <span className="text-orange-400 font-semibold">Kubernetes</span>, <span className="text-orange-400 font-semibold">Docker</span>, and <span className="text-orange-400 font-semibold">CI/CD pipelines</span>.
         </p>
 
-        <p className='text-base md:text-lg mb-4'>
-          Currently, I'm diving into the world of MERN Stack, learning its ins and outs to add another powerful tool to my web development arsenal. It's an exciting challenge, and I can't wait to see how I can leverage its capabilities to create even more impressive projects.
+        <p className="text-lg md:text-xl mb-4 animate-slideIn delay-200">
+          Recently, I have been diving deeper into the <span className="highlight">MERN stack</span> and utilizing <strong>TypeScript</strong> with <strong>Node.js</strong> for backend development. I’ve deployed full-stack applications on <strong>Kubernetes</strong> and integrated them with robust <strong>CI/CD pipelines</strong>. My portfolio includes projects where I’ve designed cloud architectures with <span className="text-orange-400">Terraform</span>, built scalable APIs, and implemented automated testing and linting workflows to ensure quality and efficiency.
         </p>
 
-        <p className='text-base md:text-lg mb-4'>
-          Sure, I've got my technical skills down, but what truly sets me apart is my knack for diving into thorny problems and being the kind of team player everyone wants on their side. Whether it's digging deep into intricate lines of code or collaborating on those head-scratching deployment puzzles, you can count on me to keep a positive attitude and a laser focus on practical solutions.
+        <p className="text-lg md:text-xl mb-4 animate-fadeIn delay-300">
+          Beyond technical expertise, I excel in <span className="highlight">problem-solving</span> and <span className="text-orange-400 font-semibold">collaboration</span>. Whether debugging intricate code or optimizing deployment pipelines, I approach every challenge with a positive mindset, practical solutions, and a passion for teamwork.
         </p>
 
-        <p className='text-base md:text-lg mb-4'>
-          But there's more to me than just technology. I also understand the rhythm of the Software Development Life Cycle (SDLC), you know, that cycle from idea to finished product. I've wrapped my head around different methods like Agile, Waterfall, and Iterative, understanding the importance of each stage from inception to maintenance. This knowledge helps me fit into bigger projects seamlessly and make valuable contributions at every step.
+        <p className="text-lg md:text-xl mb-4 animate-slideIn delay-400">
+          I am well-versed in <strong>Software Development Life Cycle (SDLC)</strong> methodologies like <span className="highlight">Agile</span> and <span className="text-orange-400">Scrum</span>. My ability to contribute to all stages of a project ensures seamless progress, whether planning sprints, managing tasks, or delivering milestones.
         </p>
 
-        <p className='text-base md:text-lg mb-4'>
-          So, as I stand here, on the cusp of possibilities, I'm ready to dive headfirst into the exciting world of web development and DevOps. Imagine me as that eager explorer, armed with innovation and a drive for excellence, ready to make my mark in these dynamic fields. There's a lot more to come, so keep an eye out for the impact I'm about to create!
+        <p className="text-lg md:text-xl mb-4 animate-fadeIn delay-500">
+          As I continue to expand my expertise, I aim to establish myself as a <strong>Backend Developer with Cloud Expertise</strong>, building robust, scalable solutions for businesses. <span className="highlight">The future holds limitless possibilities</span>, and I am ready to take on new challenges with innovation and determination.
         </p>
       </div>
 
-      <Experience />
+      {/* Experience Component */}
+      {/* Experience Section */}
+      <div className="mt-12 animate-slideInUp">
+        <h1 className="text-3xl font-bold mb-6">Experience</h1>
+
+        {/* University of Windsor */}
+        <div className="mb-8">
+          <div className="flex items-center mb-2">
+            <h2 className="text-lg font-bold">Graduate Student</h2>
+          </div>
+          <p className="text-sm text-gray-200">
+            University of Windsor - Windsor, Ontario, Canada
+          </p>
+          <p className="text-sm text-gray-200">
+            Jan 2023 - June 2024
+          </p>
+        </div>
+
+        {/* TOPS Technologies */}
+        <div className="mb-8">
+          <div className="flex items-center mb-2">
+            <h2 className="text-lg font-bold">React Developer (Internship)</h2>
+          </div>
+          <p className="text-sm text-gray-200">
+            TOPS Technologies Pvt. Ltd - Ahmedabad
+          </p>
+          <p className="text-sm text-gray-200">
+            Nov 2021 - Nov 2022 · 1 yr 1 mo
+          </p>
+          <p className="text-sm text-gray-200">
+            Technology Used: ReactJS, NodeJS, Linux, AWS, HTML, CSS, Agile
+            Methodologies
+          </p>
+          <ul className="list-disc ml-6">
+            <li>Led planning and development of three client projects.</li>
+            <li>
+              Managed agile sprints and implemented feedback for enhanced
+              usability.
+            </li>
+            <li>
+              Collaborated with a cross-functional team to launch a web
+              application using React and Redux.
+            </li>
+            <li>Designed and implemented RESTful API endpoints in NodeJS.</li>
+            <li>Conducted regular code reviews to ensure quality and security.</li>
+          </ul>
+        </div>
+
+        {/* Technical Skills */}
+        <div>
+          <h2 className="text-xl font-bold mb-4">Technical Skills</h2>
+          <div className="flex flex-wrap">
+            {
+              [
+                "Node.js (TypeScript)",
+                "ReactJS",
+                "AWS Cloud Services (EC2, S3, RDS, Lambda, CloudFormation)",
+                "Terraform (Infrastructure as Code)",
+                "Kubernetes (Deployments, NodePort, Helm)",
+                "Docker (Docker Compose, Multi-stage Builds, CVE Scanning)",
+                "CI/CD Pipelines (GitHub Actions, Jenkins)",
+                "API Development (RESTful, GraphQL)",
+                "MongoDB (NoSQL Databases)",
+                "MySQL (RDBMS)",
+                "Python (Automation, Scripting)",
+                "Shell Scripting",
+                "Linux (Ubuntu, CentOS)",
+                "Git, GitHub",
+                "Agile Methodologies (Scrum, Kanban)",
+                "Container Orchestration",
+                "Testing & Linting in CI/CD",
+                "Security (Image Vulnerability Scanning, IAM Policies)",
+                "UI/UX Tools (Figma, AdobeXD)"
+              ].map((skill, index) => (
+                <div
+                  key={index}
+                  className="bg-amber-400 text-black rounded-full px-4 py-2 m-1"
+                >
+                  {skill}
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Animated Footer Message */}
+      <div className="mt-12 text-center">
+        <p className="text-lg md:text-xl font-semibold text-orange-300 animate-bounce">
+          Let’s build something incredible together!
+        </p>
+      </div>
     </div>
   );
-}
+};
 
 export default About;
